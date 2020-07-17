@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <title>H.V.Desai college,Pune</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style >
     @font-face{
       font-family:titillium;
       src:url('TitilliumWeb-Regular.ttf');
      }
+     
     *{
       margin:0;
       padding:0;
@@ -18,35 +20,62 @@
     }
     header{
       width:100%;
-      height:10vh;
-      background:#f55449;
-      color:#0f1f38;
+      height:8vh;
+      background: #0f1f38 ;
+      color:white;
       overflow:hidden;
       display:flex;
       align-items:center;
     }
-    header h1{
+    header .college-name{
       display:inline-block;
-      margin-left:0.5em;
+      margin-left:0.6em;
       background:;
+      font-size:2em;
+    }
+    header nav{
+    	background:;
+    	margin-right:;
+    	margin:auto;
+    	margin-right:0 !important;
+    }
+    header nav button{
+    	background:none;
+    	color:white;
+    	border:none;
+    	border-right:1px solid white ;
+    	outline:none;
+    	margin-left:0.5em;
+    	padding-right:0.5em;
+    }
+    header .login-button{
+    	font-size:1.2em;
+    	background:#2193b0;
+    	color:white;
+    	padding:0 0.8em;
+    	display:flex;
+    	align-items:center;
+    	height:100%;
+    	border-bottom:0.1em solid navy;
+    	
     }
     .main{
       width:100%;
-      height:90vh;
+      height:92vh;
       background:#ffffff;
       overflow:hidden;
     }
     .in-page-navigation{
       height:100%;
       width:12vw;
-      background:#0f1f38;
+      background: #0f1f38 ;
       display:inline-block;
       overflow:hidden;
     }
     .content{
       height:100%;
       width:88vw;
-      background:#fffdf0;
+      background:#E4E5E6;
       display:inline-block;
       overflow:hidden;
     }
@@ -56,14 +85,16 @@
 <body>
   <header>
     <!-- For College Name And Navigation -->
-    <h1>H. V. Desai College</h1>
+    <div class="college-name">Haribhai V. Desai College</div>
     <nav>
-      <button>Home</button>
-      <button>Home</button>
-      <button>Home</button>
-      <button>Home</button>
-      <button>Home</button>
-    </nav>
+      <button>Home</button><!--
+      --><button>Faculties</button><!--
+      --><button>IQAC</button><!--
+      --><button>Admissions</button><!--
+      --><button>About Us</button><!--
+      --><button style="border:none;">Contact Us</button>
+    </nav><!--
+    --><div class="login-button"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
   </header>
   
   <div class="main">
