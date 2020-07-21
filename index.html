@@ -21,7 +21,7 @@
     header{
       width:100%;
       height:8vh;
-      background: linear-gradient(to right, #0f1f38 , #2193b0 );
+      background:#0275d8;
       color:white;
       overflow:hidden;
       display:flex;
@@ -45,6 +45,7 @@
     	background:none;
     	color:#cccccc;
     	border:none;
+    	border-radius:0em;
     	outline:none;
     	margin-left:0.1em;
     	margin-right:0.1em;
@@ -71,7 +72,6 @@
     	align-items:center;
     	height:100%;
     	border-bottom:0.1em solid navy;
-    	
     }
     .main{
       width:100%;
@@ -84,14 +84,23 @@
     .in-page-navigation{
       height:100%;
       width:12vw;
-      background: linear-gradient( #ad292b , #bc4749 );
+      background: #f7f7f7;
+      color:black;
       display:inline-block;
       overflow:hidden;
+    }
+    .in-page-navigation li{
+    	border-bottom:1px solid #cccccc;
+    	padding:1em 0.5em;
+    }
+    .active-spy-link{
+    	background:#d9534f;
+    	color:white;
     }
     .content{
       height:100%;
       width:88vw;
-      background: #E4E5E6 ;
+      background:white #E4E5E6 ;
       display:inline-block;
       overflow:hidden;
     }
@@ -117,7 +126,14 @@
     
     <!-- For Actual Content -->
     <div class="in-page-navigation">
-      <!-- For ScrollSpy -->
+      <ul>
+      	<li class="active-spy-link">Intro</li>
+      	<li>Gallery</li>
+      	<li>Facilities</li>
+      	<li>Our Team</li>
+      	<li>Testimonials</li>
+      	<li>Reach Us</li>
+      </ul>
     </div><!--
     
     --><div class="content">
