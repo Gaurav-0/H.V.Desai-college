@@ -21,11 +21,14 @@
     header{
       width:100%;
       height:8vh;
-      background: #0f1f38 ;
+      background: linear-gradient(to right, #0f1f38 , #2193b0 );
       color:white;
       overflow:hidden;
       display:flex;
       align-items:center;
+      z-index:1;
+      box-shadow:12vw 0.2em 0.5em #7089b2;
+      position:relative;
     }
     header .college-name{
       display:inline-block;
@@ -34,23 +37,35 @@
       font-size:2em;
     }
     header nav{
-    	background:;
-    	margin-right:;
+    	color:#cccccc;
     	margin:auto;
     	margin-right:0 !important;
     }
     header nav button{
     	background:none;
-    	color:white;
+    	color:#cccccc;
     	border:none;
-    	border-right:1px solid white ;
+    	border-radius:0.7em;
     	outline:none;
-    	margin-left:0.5em;
-    	padding-right:0.5em;
+    	margin-left:0.1em;
+    	margin-right:0.1em;
+    	padding:0.5em;
+    	transition:300ms ease-in;
+    }
+    header nav button:hover{
+    	background: #E4E5E6 ;
+    	color:#444444;
+    	box-shadow:0 0 0.5em white;
+    }
+    header nav button:hover .fa{
+    	display:inline-block;
+    }
+    header nav button .fa{
+    	display:none;
     }
     header .login-button{
     	font-size:1.2em;
-    	background:#2193b0;
+    	background: #0f1f38 ;
     	color:white;
     	padding:0 0.8em;
     	display:flex;
@@ -64,18 +79,20 @@
       height:92vh;
       background:#ffffff;
       overflow:hidden;
+      display:one;
+      position:relative;
     }
     .in-page-navigation{
       height:100%;
       width:12vw;
-      background: #0f1f38 ;
+      background: linear-gradient( #ad292b , #bc4749 );
       display:inline-block;
       overflow:hidden;
     }
     .content{
       height:100%;
       width:88vw;
-      background:#E4E5E6;
+      background: #E4E5E6 ;
       display:inline-block;
       overflow:hidden;
     }
@@ -87,12 +104,12 @@
     <!-- For College Name And Navigation -->
     <div class="college-name">Haribhai V. Desai College</div>
     <nav>
-      <button>Home</button><!--
-      --><button>Faculties</button><!--
-      --><button>IQAC</button><!--
-      --><button>Admissions</button><!--
-      --><button>About Us</button><!--
-      --><button style="border:none;">Contact Us</button>
+      <button>Home <i class="fa fa-home" aria-hidden="true"></i></button>|<!--
+      --><button>Faculties <i class="fa fa-sitemap" aria-hidden="true"></i></button>|<!--
+      --><button>IQAC <i class="fa fa-book" aria-hidden="true"></i></button>|<!--
+      --><button>Admissions <i class="fa fa-indent" aria-hidden="true"></i></button>|<!--
+      --><button>About Us <i class="fa fa-info-circle" aria-hidden="true"></i></button>|<!--
+      --><button style="border:none;">Contact Us <i class="fa fa-phone" aria-hidden="true"></i></button>
     </nav><!--
     --><div class="login-button"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
   </header>
