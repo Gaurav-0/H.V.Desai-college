@@ -20,14 +20,14 @@
     }
     header{
       width:100%;
-      height:8vh;
-      background:#0275d8;
+      height:9vh;
+      background: linear-gradient(to bottom right, #031f38 , #004a8c ) ;
       color:white;
       overflow:hidden;
       display:flex;
       align-items:center;
       z-index:1;
-      box-shadow:0em 0.2em 0.5em #7089b2;
+      box-shadow:12vw 0.2em 0.5em #7089b2;
       position:relative;
     }
     header .college-name{
@@ -53,9 +53,9 @@
     	transition:300ms ease-in;
     }
     header nav button:hover{
-    	background: #E4E5E6 ;
-    	color:#444444;
-    	box-shadow:0 0 0.5em white;
+    	background: linear-gradient(to top left, #f55449 , #ffb600 ) ;
+    	color:white;
+    	box-shadow:0 0 0.5em #ffb600;
     }
     header nav button:hover .fa{
     	display:inline-block;
@@ -75,7 +75,7 @@
     }
     .main{
       width:100%;
-      height:92vh;
+      height:91vh;
       background:#ffffff;
       overflow:hidden;
       display:one;
@@ -84,32 +84,138 @@
     .in-page-navigation{
       height:100%;
       width:12vw;
-      background: #f7f7f7;
+      background: linear-gradient(to top right, #f7f7f7 , #d7d7d7 );
       color:black;
       display:inline-block;
-      overflow:hidden;
+      overflow:scroll;
+      position:absolute;
+      left:0;
+      
     }
     .in-page-navigation li{
-    	border-bottom:1px solid #cccccc;
-      border-top:1px solid #cccccc;
-    	padding:1em 0em;
-      text-align:center;
+    	border-bottom:0px solid;
+    	border-top:0px solid ;
+    	padding:1em 0.5em;
+    	margin:0em 0;
+    	text-align:center;
     }
     .active-spy-link{
-    	background:#d9534f;
+    	background: linear-gradient(to bottom right, #f55449 , #ffb600 ) ;
     	color:white;
     }
     .content{
       height:100%;
       width:88vw;
-      background:white #E4E5E6 ;
+      background: white ;
+      color:black;
       display:inline-block;
       overflow:hidden;
+      position:absolute;
+      left:12vw;
+    }
+   	.content .view-btn{
+    	position:absolute;
+    	top:100%;
+    	margin-top:-6vw;
+    	height:5vw;
+    	width:8vw;
+    }
+    .view-btn-prev{
+    	left:0;
+    }
+    .view-btn-next{
+    	right:0;
+    	
+    }
+    .content .view{
+    	display:none;
+    	height:100%;
+    	width:100%;
+    	position:relative;
+    }
+    .view2{
+    	display:block !important;
+    }
+    
+    #slider [type=radio] {
+    	display: none;
+    }
+    #slider {
+    	height: 70vh;
+    	position: relative;
+    	perspective: 600px;
+    	transform-style: preserve-3d;
+    	margin:0vw 0;
+    }
+    	
+    #slider label {
+    	margin: auto;
+    	width: 70%;
+    	height: 100%;
+    	border-radius: 4px;
+    	position: absolute;
+    	left: 0; right: 0;
+    	cursor: pointer;
+    	transition: transform 0.4s ease;
+    	background-size:cover;
+   	}
+    	
+    #s1:checked ~ #slide4, #s2:checked ~ #slide5,
+    #s3:checked ~ #slide1, #s4:checked ~ #slide2,
+    #s5:checked ~ #slide3 {
+    	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    	transform: translate3d(-30%,0,-200px);
+    }
+    	
+    #s1:checked ~ #slide5, #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2, #s4:checked ~ #slide3,
+    #s5:checked ~ #slide4 {
+    	box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    	transform: translate3d(-15%,0,-100px);
+    }
+    	
+   	#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+    #s3:checked ~ #slide3, #s4:checked ~ #slide4,
+    #s5:checked ~ #slide5 {
+    	box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+    	transform: translate3d(0,0,0);
+    }
+    	
+    #s1:checked ~ #slide2, #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4, #s4:checked ~ #slide5,
+    #s5:checked ~ #slide1 {
+    	box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    	transform: translate3d(15%,0,-100px);
+    }
+    	
+    #s1:checked ~ #slide3, #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5, #s4:checked ~ #slide1,
+    #s5:checked ~ #slide2 {
+    	box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    	transform: translate3d(30%,0,-200px);
+    }
+    #slide1 { background: linear-gradient(to top right, #f55449 , #ffb600 );}
+    #slide2	{ background: linear-gradient(to bottom right, #031f38 , #004a8c );}
+    #slide3 { background: linear-gradient(to bottom left, cyan , dodgerblue  );}
+    #slide4 { background: linear-gradient(to top left, lime , yellow );}
+    #slide5 { background: linear-gradient(to top right, purple , navy );}
+    
+    #facilities table{
+    	background:#dddddd;
+    	
+    }
+    #facilities table td{
+    	padding:1em 1em;
+    	background:#eeeeee;
+    	text-align:center;
+    }
+    #facilities table img{
+    	max-width:6vw;
     }
   </style>
 </head>
 
-<body>
+<body onload="changeView(0)">
   <header>
     <!-- For College Name And Navigation -->
     <div class="college-name">Haribhai V. Desai College</div>
@@ -119,7 +225,7 @@
       --><button>IQAC <i class="fa fa-book" aria-hidden="true"></i></button>|<!--
       --><button>Admissions <i class="fa fa-indent" aria-hidden="true"></i></button>|<!--
       --><button>About Us <i class="fa fa-info-circle" aria-hidden="true"></i></button>|<!--
-      --><button style="border:none;">Contact Us <i class="fa fa-phone" aria-hidden="true"></i></button>
+      --><button>Contact Us <i class="fa fa-phone" aria-hidden="true"></i></button>
     </nav><!--
     --><div class="login-button"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
   </header>
@@ -129,19 +235,117 @@
     <!-- For Actual Content -->
     <div class="in-page-navigation">
       <ul>
-      	<li class="active-spy-link">Intro</li>
-      	<li>Gallery</li>
-      	<li>Facilities</li>
-      	<li>Our Team</li>
-      	<li>Testimonials</li>
-      	<li>Reach Us</li>
+      	<li class="spy-link " onclick="changeView(0)" >Intro</li>
+      	<li class="spy-link" onclick="changeView(1)">Gallery</li>
+      	<li class="spy-link active-spy-link" onclick="changeView(2)">Facilities</li>
+      	<li class="spy-link" onclick="changeView(3)">Our Team</li>
+      	<li class="spy-link" onclick="changeView(4)">Testimonials</li>
+      	<li class="spy-link" onclick="changeView(5)">Reach Us</li>
       </ul>
+      <!--<div class="contact">
+      	<img src="assets/img/png/DESAI_LOGO.png">
+      	<p><i class="fa fa-phone" aria-hidden="true"></i> : 020 - 24450373</p>
+      	<p><i class="fa fa-email" aria-hidden="true"></i> : admin@hvdesaicollege.org</p>
+      </div>-->
     </div><!--
     
     --><div class="content">
-      <!-- For ScrollSpy Content -->
+      <!--<button class="view-btn view-btn-prev"> &#8592; </button>
+      <button class="view-btn view-btn-next"> &#8594; </button>-->
+      <div class="view view0 ">
+      	Haribhai V. Desai College,pune
+      	Best Education is our first priority.
+      </div>
+      <div class="view view1">
+      	<div id="slider">
+      		<input type="radio" name="slider" id="s1">
+      		<input type="radio" name="slider" id="s2">
+      		<input type="radio" name="slider" id="s3" checked>
+      		<input type="radio" name="slider" id="s4">
+      		<input type="radio" name="slider" id="s5">
+      		<label for="s1" id="slide1"></label>
+      		<label for="s2" id="slide2"></label>
+      		<label for="s3" id="slide3"></label>
+      		<label for="s4" id="slide4"></label>
+      		<label for="s5" id="slide5"></label>
+      	</div>
+      </div>
+      <div class="view view2">
+      	<div id="facilities">
+      		<table >
+      			<tr>
+      				<td>
+      					<img src="Websites/collegeWebsiteFromScratch/assets/img/png/facility/infrastructure.png">
+      					<p>Our college has excellent infrastructure. including Library floor, classrooms, number of laboratories, office block, etc.</p>
+      				</td>
+      				<td>
+      					<img src="Websites/collegeWebsiteFromScratch/assets/img/png/facility/wifi.png">
+      					<p>Our college has Wifi connectivity on all floors. It promotes excellent connectivity.</p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/laboratory.png ">
+      					<p>Our college has language lab, commerce lab, new computer lab, science labs for both UG and PG.</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/cctv.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/library.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/avhall.png ">
+      					<p></p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/hall.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/gym.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/medical.png ">
+      					<p></p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/parking.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/canteen.png ">
+      					<p></p>
+      				</td>
+      				<td>
+      					<img src=" Websites/collegeWebsiteFromScratch/assets/img/png/facility/hostel.png ">
+      					<p></p>
+      				</td>
+      			</tr>
+      		</table>
+      	</div>
+      </div>
+      <div class="view view3">
+      	Our Team
+      	Pathade sir
+      	Pawar sir
+      </div>
+      <div class="view view4">
+      	student's review
+      </div>
+      <div class="view view5">
+      	Map
+      	contact
+      	developers
+      </div>
     </div>
-    
   </div>
   
   <!--<footer>
@@ -149,4 +353,18 @@
     <!--&#169; All copyrights reserved.
   </footer>-->
 </body>
+<script>
+	//Set ActiveView = 0 when a new page is loaded
+	var ActiveViewIndex=0;
+	function chaneView(toLoadViewIndex){
+		var spyLink = document.getElementsByClassName("spy-link");
+		var view = document.getElementsByClassName("view");
+		spyLink[ActiveViewIndex].classList.remove("active-spy-link");
+		spyLink[toLoadViewIndex].classList.add("active-spy-link");
+		view[ActiveViewIndex].style.display="none";
+		view[toLoadViewIndex].style.display="block";
+		ActiveViewIndex = toLoadViewIndex;
+		
+	}
+</script>
 </html>
